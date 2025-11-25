@@ -67,10 +67,166 @@
         100% {
           transform: rotate(0deg);
         }
+     }
+     #comet_part1 {
+        text-align: right;
+        position: absolute;
+        z-index: 0;
+        top: 0px;
+        left: 0px;
+        overflow: hidden;
+        white-space: nowrap;
+        height: max-content;
+        width: 100%;
+        margin: auto;
+        animation: comet-fly-part-1 5.5s linear 1;
+        display: inline-block;
+    }
+    #comet2_part1 {
+        text-align: right;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        overflow: hidden;
+        z-index: 0;
+        white-space: nowrap;
+        height: max-content;
+        width: 100%;
+        margin: auto;
+        animation: comet2-fly-part-1 4.5s linear 1;
+        display: inline-block;
+    }
+    #comet3_part1 {
+        text-align: right;
+        position: absolute;
+        z-index: 0;
+        top: 0px;
+        left: 0px;
+        overflow: hidden;
+        white-space: nowrap;
+        height: max-content;
+        width: 100%;
+        margin: auto;
+        animation: comet3-fly-part-1 3.5s linear 1;
+        display: inline-block;
+    }
+    @keyframes comet-fly-part-1 {
+      0% {
+        transform: translateX(-150%);
+      }
+      100% {
+        transform: translateX(150%);
+      }
+    }
+    @keyframes comet2-fly-part-1 {
+      0% {
+        transform: translateX(-100%);
+      }
+      100% {
+        transform: translateX(100%);
+      }
+    }
+    @keyframes comet3-fly-part-1 {
+      0% {
+        transform: translateX(-120%);
+      }
+      100% {
+        transform: translateX(120%);
+      }
+    }
+    #comet_rotate {
+      animation: swing 5.5s linear 1;
+    }
+    #comet2_rotate {
+      animation: swing2 4.5s linear 1;
+    }
+    #comet3_rotate {
+      animation: swing3 3.5s linear 1;
+    }
+    @keyframes swing {
+      0% {
+        transform: rotate (0deg);
+      }
+      100% {
+        transform: rotate(-50deg);
+      }
+    }
+    @keyframes swing2 {
+      0% {
+        transform: rotate (0deg);
+      }
+      100% {
+        transform: rotate(-35deg);
+      }
+    }
+      @keyframes swing3 {
+        0% {
+          transform: rotate (0deg);
+        }
+        100% {
+          transform: rotate(-15deg);
+        }
+      }
+      #comet_part2 {
+        animation: comet-fly-part-2 5.5s linear 1;
+      }
+      #comet2_part2 {
+        animation: comet2-fly-part-2 4.5s linear 1;
+      }
+      #comet3_part2 {
+        animation: comet3-fly-part-2 3.5s linear 1;
+      }
+      @keyframes comet-fly-part-2 {
+        0% {
+          transform: translateY(250%);
+        }
+        100% {
+          transform: translateY(-250%);
+        }
+      }
+      @keyframes comet2-fly-part-2 {
+        0% {
+          transform: translateY(170%);
+        }
+        100% {
+          transform: translateY(-170%);
+        }
+      }
+      @keyframes comet3-fly-part-2 {
+        0% {
+          transform: translateY(120%);
+        }
+        100% {
+          transform: translateY(-120%);
+        }
       }
     </style>
   </head>
   <body>
+    <div id="comet_part1">
+      <!-- Comet? Yes! *+o -->
+      <div id="comet_part2">
+        <div id="comet_rotate">
+          <p class="comet_tails"><span style="color: #003366">⋅</span><span style="color: #7799cc">∗</span><span style="color: #c01933">⟡</span><span style="color: white">●</span></p>
+        </div>
+      </div>
+    </div>
+    <div id="comet2_part1">
+      <!-- Another comet? Yes! *+o -->
+      <div id="comet2_part2">
+        <div id="comet2_rotate">
+          <p class="comet_tails"><span style="color: #003366">⋅</span><span style="color: #7799cc">∗</span><span style="color: #c01933">⟡</span><span style="color: white">●</span></p>
+        </div>
+      </div>
+    </div>
+    <div id="comet3_part1">
+      <!-- A third comet? Yes! *+o -->
+      <div id="comet3_part2">
+        <div id="comet3_rotate">
+          <p class="comet_tails"><span style="color: #003366">⋅</span><span style="color: #7799cc">∗</span><span style="color: #c01933">⟡</span><span style="color: white">●</span></p>
+        </div>
+      </div>
+    </div>
     <div id="everything_astronomy">
         <p class="dangly-decorations">&nbsp;<span style="color: rgb(176, 144, 176);">|<br>&nbsp;|<br>&nbsp;|<br>&nbsp;|<br>&nbsp;|</span><br><span style="color: rgb(119, 153, 204); font-size: 20px;">☽</span></p>
       </div>
@@ -88,6 +244,7 @@
       <h2 id="general-info">General info</h2>
       <p>Hi, it's me, CosmicAirbusA330! :›</p>
       <ul>
+        <li>.+* Someone in the observable universe</li>
         <li>.+* sassy nature</li>
         <li>.+* my pronouns are: airbus/a330 [she/her]</li>
         <li>.+* From the galaxy NGC 5866</li>
