@@ -41,6 +41,16 @@
       p {
         color: #4c82b5;
       }
+      p.delta_plane {
+        font-family: sans-serif;
+        background: transparent;
+        font-size: 40px;
+      }
+      p.comet_tails, p.dangly-decorations {
+        font-family: sans-serif;
+        background: transparent;
+        font-size: 20px;
+      }
       a:link {
         color: #ad9f79;
       }
@@ -200,9 +210,59 @@
           transform: translateY(0%);
         }
       }
+      #boeing757 {
+        text-align: right;
+        position: absolute;
+        z-index: 0;
+        white-space: nowrap;
+        height: max-content;
+        width: 100%;
+        margin: auto;
+        animation: flight-path-part-1 linear 5.5s infinite;
+        display: inline-block;
+      }
+      @keyframes flight-path-part-1 {
+        0% {
+          transform: translateX(0%);
+        }
+        100% {
+          transform: translateX(100%);
+        }
+      }
+      #rotate {
+        animation: turn 5.5s linear infinite;
+      }
+      @keyframes turn {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(-35deg);
+        }
+      }
+      #fly {
+        animation: flight-path-part-2 5.5s infinite;
+      }
+      @keyframes flight-path-part-2 {
+        0% {
+          transform: translateY(100%);
+        }
+        100% {
+          transform: translateY(-100%);
+        }
+      }
     </style>
   </head>
   <body>
+    <div id="boeing757">
+      <!-- Added on 2025/11/25 -->
+      <!-- It's a mini Boeing 757, what else could possibly be here? ›–}– -->
+      <div id="rotate">
+        <div id="fly">
+          <p class="delta_plane"><span style="color: rgb(0, 51, 102);">›</span><span style="color: rgb(211, 211, 211);">–</span><span style="color: rgb(168, 168, 168);">}</span><span style="color: rgb(211, 211, 211);">–</span></p>
+        </div>
+      </div>
+    </div>
     <div id="comet_part1">
       <!-- Comet? Yes! *+o -->
       <div id="comet_part2">
