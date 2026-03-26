@@ -3,8 +3,303 @@
   <head>
     <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0">
     <title>deep sky objects.</title>
+    <style>
+      h1.header {
+        background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/The_Crab_of_the_Southern_Sky_Hen_2-104.tif/lossy-page1-512px-The_Crab_of_the_Southern_Sky_Hen_2-104.tif.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        font-family: sans-serif;
+        color: rgb(235, 224, 206);
+        padding: 2.5px;
+      }
+      h3.subheading {
+        color: rgb(179, 198, 204);
+        font-family: sans-serif;
+      }
+      .content {
+        border: 2.5px solid rgb(142, 145, 156);
+        margin: 10px;
+        padding: .5em;
+      }
+      ul li {
+        color: rgb(240, 177, 153);
+        list-style-type: disc;
+      }
+      p {
+        color: rgb(230, 206, 179);
+      }
+      body {
+        background-image: url(https://upload.wikimedia.org/wikipedia/commons/6/63/A_Rose_Made_of_Galaxies_Highlights_Hubble%27s_21st_Anniversary_jpg.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        background-color: rgb(35, 44, 51);
+      }
+      a:link {
+        color: rgb(130, 219, 237);
+      }
+      a:visited {
+        color: rgb(237, 224, 206);
+      }
+      a:hover {
+        background-image: url(https://upload.wikimedia.org/wikipedia/commons/c/c2/Messier_073_2MASS.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        color: rgb(235, 230, 205);
+      }
+      /* ignore all this css if you want, i only wanted each link to be a bit more unique */
+      a.black-holes:link {
+        color: rgb(240, 183, 39);
+      }
+      a.black-holes:visited {
+        color: rgb(242, 123, 19);
+      }
+      a.black-holes:hover {
+        background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Black_hole_-_Messier_87_crop_max_res.jpg/960px-Black_hole_-_Messier_87_crop_max_res.jpg); /* Image credit: Event Horizon Telescope */
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        color: rgb(245, 245, 245);
+      }
+      a.starclusters:link {
+        color: rgb(171, 182, 235);
+      }
+      a.starclusters:visited {
+        color: rgb(240, 216, 144);
+      }
+      a.starclusters:hover {
+        background-image: url(https://upload.wikimedia.org/wikipedia/commons/f/f0/Messier_object_093.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        color: rgb(224, 224, 224);
+      }
+      a.open-clusters:link {
+        color: rgb(178, 238, 240);
+      }
+      a.open-clusters:visited {
+        color: rgb(240, 240, 240);
+      }
+      a.open-clusters:hover {
+        background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Pleiades_large.jpg/960px-Pleiades_large.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        color: rgb(172, 214, 242);
+      }
+      a.nebulae:link {
+        color: rgb(159, 191, 160);
+      }
+      a.nebulae:visited {
+        color: rgb(235, 164, 200);
+      }
+      a.nebulae:hover {
+        background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/e/ef/NGC_2264.jpg/500px-NGC_2264.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        color: rgb(189, 216, 240);
+      }
+      a.galaxies:link {
+        color: rgb(179, 179, 179);
+      }
+      a.galaxies:visited {
+        color: rgb(196, 185, 168);
+      }
+      a.galaxies:hover {
+        background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Extragalactic_peculiarity.jpg/960px-Extragalactic_peculiarity.jpg); /* Image credit: ESA/Hubble & NASA */
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        color: rgb(232, 199, 214);
+      }
+      a.spiral-galaxies:link {
+        color: rgb(171, 193, 199);
+      }
+      a.spiral-galaxies:visited {
+        color: rgb(214, 197, 188);
+      }
+      a.spiral-galaxies:hover {
+        background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/A_dramatic_demise_ESA21501474.tiff/lossy-page1-1046px-A_dramatic_demise_ESA21501474.tiff.jpg); /* Image credit: European Space Agency */
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        color: rgb(212, 249, 255);
+      }
+      a.unbarred-spiral-galaxies:link {
+        color: rgb(153, 209, 235);
+      }
+      a.unbarred-spiral-galaxies:visited {
+        color: rgb(240, 212, 156);
+      }
+      a.unbarred-spiral-galaxies:hover {
+        background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/NGC_2841.jpg/960px-NGC_2841.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        color: rgb(242, 215, 227);
+      }
+      a.intermediate-spiral-galaxies:link {
+        color: rgb(209, 193, 230);
+      }
+      a.intermediate-spiral-galaxies:visited {
+        color: rgb(227, 195, 173);
+      }
+      a.intermediate-spiral-galaxies:hover {
+        background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/Noao-n4725needham.jpg/960px-Noao-n4725needham.jpg); /* Image credit: KPNO/NOIRLab/NSF/AURA/Rick Needham/Flynn Haase */
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        color: rgb(214, 169, 242);
+      }
+      a.barred-spiral-galaxies:link {
+        color: rgb(171, 190, 214);
+      }
+      a.barred-spiral-galaxies:visited {
+        color: rgb(228, 232, 195);
+      }
+      a.barred-spiral-galaxies:hover {
+        background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/Hubble2005-01-barred-spiral-galaxy-NGC1300.jpg/960px-Hubble2005-01-barred-spiral-galaxy-NGC1300.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        color: rgb(194, 214, 237);
+      }
+      a.magellanic-spiral-galaxies:link {
+        color: rgb(237, 237, 218);
+      }
+      a.magellanic-spiral-galaxies:visited {
+        color: rgb(232, 172, 190);
+      }
+      a.magellanic-spiral-galaxies:hover {
+        background-image: url(https://upload.wikimedia.org/wikipedia/commons/9/94/Large.mc.arp.750pix.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        color: rgb(195, 205, 232);   
+      }
+      a.elliptical-galaxies:link {
+        color: rgb(245, 230, 196);
+      }
+      a.elliptical-galaxies:visited {
+        color: rgb(252, 148, 114);
+      }
+      a.elliptical-galaxies:hover {
+        background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/ESO_306-17.jpg/1280px-ESO_306-17.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        color: rgb(245, 195, 152);
+      }
+      a.lenticular-galaxies:link {
+        color: rgb(195, 207, 219);
+      }
+      a.lenticular-galaxies:visited {
+        color: rgb(224, 213, 192);
+      }
+      a.lenticular-galaxies:hover {
+        background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/Ngc5866_hst_big_rotated.jpg/1280px-Ngc5866_hst_big_rotated.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        color: rgb(219, 219, 219);
+      }
+      a.irregular-galaxies:link {
+        color: rgb(240, 136, 101);
+      }
+      a.irregular-galaxies:visited {
+        color: rgb(245, 128, 149);
+      }
+      a.irregular:hover {
+        background-image: url(https://upload.wikimedia.org/wikipedia/commons/3/31/NGC_1569.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        color: rgb(245, 179, 133);
+      }
+      a.ring-galaxies:link {
+        color: rgb(131, 145, 156);
+      }
+      a.ring-galaxies:visited {
+        color: rgb(232, 218, 146);
+      }
+      a.ring-galaxies:hover {
+        background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Hoag%27s_object.jpg/1280px-Hoag%27s_object.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        color: rgb(209, 235, 255);
+      }
+      a.interacting-galaxies:link {
+        color: rgb(184, 220, 240);
+      }
+      a.interacting-galaxies:visited {
+        color: rgb(201, 172, 149);
+      }
+      a.interacting-galaxies:hover {
+        background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/Antennae_Galaxies_reloaded.jpg/1280px-Antennae_Galaxies_reloaded.jpg); /* Image credit: ESA/Hubble & NASA */
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        color: rgb(245, 186, 225);
+      }
+      a.peculiar-galaxies:link {
+        color: rgb(196, 196, 196);
+      }
+      a.peculiar-galaxies:visited {
+        color: rgb(222, 212, 202);
+      }
+      a.peculiar-galaxies:hover {
+        background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/Sombrero_Galaxy_%28heic2506a%29.jpg/1280px-Sombrero_Galaxy_%28heic2506a%29.jpg); /* Image credit: ESA/Hubble & NASA, K. Noll */
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        color: rgb(224, 224, 224);
+      }
+      a.quasars:link {
+        color: rgb(228, 238, 245);
+      }
+      a.quasars:visited {
+        color: rgb(193, 198, 209);
+      }
+      a.quasars:hover {
+        background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/QSO_B0957%2B0561.jpg/960px-QSO_B0957%2B0561.jpg); /* Image credit: ESA/Hubble & NASA */
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        color: rgb(235, 222, 193);
+      }
+      a.BL-Lacertae-objects:link {
+        color: rgb(199, 159, 131);
+      }
+      a.BL-Lacertae-objects:visited {
+        color: rgb(242, 192, 136);
+      }
+      a.BL-Lacertae-objects:hover {
+        background-image: url(https://upload.wikimedia.org/wikipedia/commons/e/ef/BL_Lacertae_Pan-STARRS_DR1.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        color: rgb(179, 172, 156);
+      }
+      a.jellyfish-galaxies:link {
+        color: rgb(158, 145, 134);
+      }
+      a.jellyfish-galaxies:visited {
+        color: rgb(204, 230, 237);
+      }
+      a.jellyfish-galaxies:hover {
+        background-image: url(https://upload.wikimedia.org/wikipedia/commons/0/0f/MUSE_view_of_the_ram-pressure_stripped_galaxy_ESO_137-001.jpg); /* Image credit: ESO/M. Fumagalli */
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        color: rgb(189, 218, 255);
+      }
+    </style>
   </head>
   <body>
-    <h1>deep sky objects</h1>
+    <h1 class="header">deep sky objects</h1>
   </body>
 </html>
